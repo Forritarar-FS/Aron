@@ -12,26 +12,28 @@ class ArticlesController extends Controller {
 	{
 		$articles = Article::latest('published_at')->get();
 
-		return view('articles.index', compact('articles'));
+		return view('articles.menu', compact('articles'));
 	}
 
 	public function show($id)
 	{
-		$article = Article::findOrFail($id);
+		$article = Article::findorFail($id);
 
-		return view('articles.show', compact('article'));
+		return view('articles.viewpost', compact('article'));
 	}
 
 	public function create()
 	{
-		return view('articles.create');
+		return view('articles.makepost');
 	}
 
 	public function store()
 	{
 		$input = Request::all();
 		$input['published_at'] = Carbon::now();
+
 		Article::create($input);
+
 		return redirect('articles');
 	}
 }

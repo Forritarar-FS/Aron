@@ -20,6 +20,8 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+	protected $redirectTo = '/articles';
+
 	/**
 	 * Create a new authentication controller instance.
 	 *
@@ -29,6 +31,7 @@ class AuthController extends Controller {
 	 */
 	public function __construct(Guard $auth, Registrar $registrar)
 	{
+		
 		$this->auth = $auth;
 		$this->registrar = $registrar;
 

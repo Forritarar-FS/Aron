@@ -29,6 +29,13 @@
 						</div>
 
 						<div class="form-group">
+							<label class="col-md-4 control-label">Username</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="username" value="{{ old('username') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
 								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -46,6 +53,20 @@
 							<label class="col-md-4 control-label">Confirm Password</label>
 							<div class="col-md-6">
 								<input type="password" class="form-control" name="password_confirmation">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Best Animal?</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="animal" value="{{ old('animal') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Favorite Color?</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="color" value="{{ old('color') }}">
 							</div>
 						</div>
 
