@@ -1,1 +1,1 @@
-Readme
+Er ad vinna med Hlyn ad gera vefsidu sem leyfir thig logga in med Steam acc. og trade-a Steam Trading Cards 1:1
