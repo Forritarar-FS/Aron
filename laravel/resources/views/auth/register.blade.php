@@ -22,6 +22,13 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
+							<label class="col-md-4 control-label">64-bit SteamID</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="steamid" value="{{ old('steamid') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-md-4 control-label">Username</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="username" value="{{ old('username') }}">
