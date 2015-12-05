@@ -1,0 +1,25 @@
+<?php $__env->startSection('content'); ?>
+	<?php
+  if (!empty(Auth::user())) {
+    $username = Auth::user()->name;
+  } else {
+    $username = "Guest";
+  };
+
+  ?>
+  <h1>The Forum</h1>  <h4 style="text-align:center;">Welcome, <?php echo e($username); ?>.</h5>
+  <a href="<?php echo e(url('/articles', 'create')); ?>"><h5 style="text-align: right;">Create A Forum Post</a></h5>
+
+  <hr/>
+  <?php foreach($articles as $article): ?>
+    <article>
+      <h2>
+        <a href="<?php echo e(url('/articles', $article->id)); ?>"><?php echo e($article->title); ?></a>
+      </h2>
+
+      <div class="body"><?php echo e($article->body); ?></div>
+    </article>
+  <?php endforeach; ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
